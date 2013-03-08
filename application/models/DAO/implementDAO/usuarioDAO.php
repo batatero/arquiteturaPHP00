@@ -2,6 +2,8 @@
 class UsuarioDAO extends GenericDAO
 {
 	public function __construct(){
-		$this->reflection = 'usuario'; 
+		$this->reflection = 'usuario';
+		parent::__construct();
+		
 	}	
 }

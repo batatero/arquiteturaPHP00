@@ -19,27 +19,11 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->model('Entities/usuario', 'usuario');
-		$this->load->model('Entities/maria', 'maria');
-		// Bean Obj
-		$usuario = new usuario();
-		$usuario->nome = 'germera';
-		$usuario->email = 'ale.ribas@hotmail.com';
-		$usuario->celular = '(41)92144448';
-		$usuario->telefone = '(41)92144448';
+		$this->load->model('facade/usuarioFacade');
+
+		$facade = new UsuarioFacade();
+		echo $facade->concatenaDadosUsuario(4);
 		
-		$usuario = FactoryDAO::getInstance('usuarioDAO')->findById(4);
-		
-		echo '<hr color=green>['.__LINE__.'] ['.__FILE__.']<br><pre align="left">'.print_r($usuario,1).'</pre><hr color=green>';
-		// Bean Obj
-		$maria = new maria();
-		$maria->nome = 'germera';
-		$maria->email = 'ale.ribas@hotmail.com';
-		$maria->celular = '(41)92144448';
-		$maria->telefone = '(41)92144448';
-		FactoryDAO::getInstance('mariaDAO')->persist($maria);
-		
-		echo '<hr color=green>['.__LINE__.'] ['.__FILE__.']<br><pre align="left">'.print_r($maria,1).'</pre><hr color=green>';
 	}
 }
 

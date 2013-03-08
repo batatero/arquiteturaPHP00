@@ -108,7 +108,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('DAO/factoryDAO');
+$autoload['model'] = array('DAO/factoryDAO','business/factoryBusiness');
 
 
 /* End of file autoload.php */

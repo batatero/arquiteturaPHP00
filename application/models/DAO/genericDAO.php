@@ -3,6 +3,9 @@ abstract class GenericDAO {
 	//variavel que será usada para fazer o reflection da classe que está sendo trabalhada
 	protected $reflection;
 	
+	public function __construct(){
+		$this->getCI()->load->model('Entities/'.$this->reflection, $this->reflection );
+	}
 
 	public function persist( $obj ) {
 		$this->getCI()->doctrine->em->persist( $obj );
@@ -10,7 +13,8 @@ abstract class GenericDAO {
 	}
 	
 	public function findById( $id ) {
-		$obj = $this->getCI()->doctrine->em->find($this->reflection,$id);
+		$obj = $this->getCI()->doctrine->em->find('usuario',$id);
+
 		$this->getCI()->doctrine->em->flush();
 		return $obj;
 	}
