@@ -1,7 +1,12 @@
 <?php
 class UsuarioFacade {
-	public function concatenaDadosUsuario( $id ) {
-		
-		return FactoryBusiness::getInstance('usuarioBusiness')->concatenaDadosUsuario( $id );
+
+	public function getUsuario( $id ) {
+		return FactoryBusiness::getInstance('usuarioBusiness')->getUsuario( $id );
 	}
+	
+	public function persistirUsuario( Usuario $usuario ) {
+		return FactoryBusiness::getInstance('usuarioBusiness')->persistirUsuario( $usuario );
+	}
+	
 }

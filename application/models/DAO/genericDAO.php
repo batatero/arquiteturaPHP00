@@ -8,6 +8,7 @@ abstract class GenericDAO {
 	}
 
 	public function persist( $obj ) {
+		
 		$this->getCI()->doctrine->em->persist( $obj );
 		$this->getCI()->doctrine->em->flush();
 	}

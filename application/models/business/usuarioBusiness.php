@@ -1,15 +1,12 @@
 <?php
 class usuarioBusiness {
 	
+	public function getUsuario( $id ) {
+		
+		return $usuario = FactoryDAO::getInstance('usuarioDAO')->findById($id);
+	}
 	
-	public function concatenaDadosUsuario( $id ) {
-		
-		$usuario = FactoryDAO::getInstance('usuarioDAO')->findById($id);
-		
-		if( $usuario instanceof usuario ) {
-			return $usuario->nome . '|' . $usuario->email;
-		} else {
-			return 'erro | objeto errado';
-		}
+	public function persistirUsuario( Usuario $usuario ) {
+		return FactoryDAO::getInstance('usuarioDAO')->persist( $usuario );
 	}
 }
