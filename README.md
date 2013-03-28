@@ -40,7 +40,7 @@ Muitos projetos necessitam que algumas classes tenham apenas uma instância. Por
 
 <fieldset>
 <legend><b>Façade</b></legend>
-um façade (fachada em francês) é um objeto que disponibiliza uma interface simplificada para uma das funcionalidades de uma API, por exemplo. Um façade pode:
+<p>um façade (fachada em francês) é um objeto que disponibiliza uma interface simplificada para uma das funcionalidades de uma API, por exemplo. Um façade pode:
 tornar uma biblioteca de software mais fácil de entender e usar;
 tornar o código que utiliza esta biblioteca mais fácil de entender;
 reduzir as dependências em relação às características internas de uma biblioteca, trazendo flexibilidade no desenvolvimento do sistema;
