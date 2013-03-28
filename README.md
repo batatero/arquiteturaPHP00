@@ -15,3 +15,16 @@ Utilizamos o Codeigniter para fazer a camada MVC, um dos padroes de projeto que 
 Para fazer a integração do codeginiter com o Doctrine foi utilizado o tutorial do link a baixo:
 <br>
 <a href="http://imasters.com.br/artigo/25199/codeigniter/como-realizar-a-integracao-do-codeigniter-com-doctrine-2/" target="_black">Doctrine 2 e codeigniter</a>
+
+<h1>Padroes de Projetos Utilizado (design patterns)</h1>
+
+Nesse projeto foi utilizado os segunintes parões:
+<ul>
+  <li>Singleton</li>
+  <li>Façade</li>
+  <li>Generic</li>
+  <li>MVC</li>
+  <li>DAO</li>
+  <li>Factory</li>
+  <li>Business</li>
+</ul>
