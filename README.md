@@ -1,12 +1,12 @@
-arquiteturaPHP00
+Arquitetura PHP 00
 ================
-Arquitetura em PHP baseada na Data Access Layer Architecture e no framework spring do java
-A arquitetura foi desenvolvida para atingir um baixo acoplamete e alta coessão com php.
+Arquitetura em PHP, baseada na Data Access Layer Architecture e no framework Spring do Java.
 
-Ela foi desenvolvida com as seguinte ferramenta:
+A arquitetura foi desenvolvida para atingir um baixo acoplameto e alta coessão com PHP.
 
-Framework Codeginiter: http://ellislab.com/codeigniter e o Doctrine 2: http://www.doctrine-project.org/
+Ela foi desenvolvida com as seguintes ferramentas:
 
-Usamos o Codeginiter para fazer a camada do MVC que é um dos padroes de projeto utilizado na arquitetura que eu irei esplicar mais a frente.
+*Framework Codeginiter: http://ellislab.com/codeigniter
+*Doctrine 2: http://www.doctrine-project.org/
 
-E o Doctrine para fazer a persistencia dos objetos "burros" POJOS objetos que contem apenas gets e sets
+Utilizamos o Codeginiter para fazer a camada MVC, um dos padroes de projeto que irei explicar mais a frente. Também utilizarei o Doctrine para fazer a persistencia dos objetos "burros" POJOS, objetos que contem apenas "GETS" e "SETS".
