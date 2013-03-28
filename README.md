@@ -28,3 +28,10 @@ Nesse projeto foi utilizado os segunintes parões:
   <li>Factory</li>
   <li>Business</li>
 </ul>
+
+<h3>Entendendo os Padroes:</h3>
+<p>Singleton</p>
+
+<p>Este padrão garante a existência de apenas uma instância de uma classe, mantendo um ponto global de acesso ao seu objeto.
+Nota linguística: O termo vem do significado em inglês quando se resta apenas uma carta nas mãos, num jogo de baralho.
+Muitos projetos necessitam que algumas classes tenham apenas uma instância. Por exemplo, em uma aplicação que precisa de uma infraestrutura de log de dados, pode-se implementar uma classe no padrão singleton. Desta forma existe apenas um objeto responsável pelo log em toda a aplicação que é acessível unicamente através da classe singleton.</p>
