@@ -16,7 +16,7 @@ Para fazer a integração do codeginiter com o Doctrine foi utilizado o tutorial
 <br>
 <a href="http://imasters.com.br/artigo/25199/codeigniter/como-realizar-a-integracao-do-codeigniter-com-doctrine-2/" target="_black">Doctrine 2 e codeigniter</a>
 
-<h1>Padroes de Projetos Utilizado (design patterns)</h1>
+<h1>Padroes de Projetos Utilizados (design patterns)</h1>
 
 Nesse projeto foi utilizado os segunintes parões:
 <ul>
