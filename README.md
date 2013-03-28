@@ -30,7 +30,7 @@ Nesse projeto foi utilizado os segunintes parões:
 </ul>
 
 <h3>Entendendo os Padroes:</h3>
-<p>Singleton</p>
+<p><b>Singleton</b></p>
 
 <p>Este padrão garante a existência de apenas uma instância de uma classe, mantendo um ponto global de acesso ao seu objeto.
 Nota linguística: O termo vem do significado em inglês quando se resta apenas uma carta nas mãos, num jogo de baralho.
