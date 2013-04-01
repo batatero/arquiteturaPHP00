@@ -16,7 +16,7 @@ Para fazer a integração do codeginiter com o Doctrine foi utilizado o tutorial
 <br>
 <a href="http://imasters.com.br/artigo/25199/codeigniter/como-realizar-a-integracao-do-codeigniter-com-doctrine-2/" target="_black">Doctrine 2 e codeigniter</a>
 
-<h1>Padrões de Projetos Utilizados (design patterns)</h1>
+<h3>Padrões de Projetos Utilizados (design patterns)</h3>
 
 Nesse projeto foi utilizado os segunintes parões:
 <ul>
@@ -48,3 +48,9 @@ Nesse projeto foi utilizado os segunintes parões:
   Para facilitar as comunicações entre camadas usamos uma Factory que ira retornar a instancia do objeto que eu vou precisar
   usar em um determinado momento do código.
 </p>
+
+Exemplo da comunicação:
+
+
+
+
