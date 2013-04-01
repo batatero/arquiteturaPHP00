@@ -31,12 +31,13 @@ Nesse projeto foi utilizado os segunintes parões:
 <p>
   Nessa arquitetura iniciaremos com uma injeção de dependência onde cada camada o irá fazer apenas o que foi feita pra 
   fazer e assim garantindo uma alta coesão:
+  </br>
+  Controller :Objeto que irá controlar o fluxo de dados e conter validações de telas;</br>
+  Façade :Objeto que irá conter as chamadas do methods que podem ser usados no sistema;</br>
+  Business : Objeto que irá conter as regras de negócio do sistema e se comunicará com a DAO se for necessário;</br>
+  DAO : Objeto responsável pela persistência do objeto;</br>
   
-  Controller :Objeto que irá controlar o fluxo de dados e conter validações de telas;
-  Façade :Objeto que irá conter as chamadas do methods que podem ser usados no sistema;
-  Business : Objeto que irá conter as regras de negócio do sistema e se comunicará com a DAO se for necessário;
-  DAO : Objeto responsável pela persistência do objeto;
-  
-  para facilitar as comunicações entre camadas usamos uma Factory que ira retornar a instancia do objeto que eu vou precisar
+  </br>
+  Para facilitar as comunicações entre camadas usamos uma Factory que ira retornar a instancia do objeto que eu vou precisar
   usar em um determinado momento do código.
 </p>
