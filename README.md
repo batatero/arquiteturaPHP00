@@ -53,5 +53,9 @@ Nesse projeto foi utilizado os segunintes parões:
 <br>
 ![Alt text](/Calcular%20Salarios.jpg "Diagrama de sequencia")
 
+##Diagrama de classes da arquitetura e estrutura de pacotes:
+<br>
+![Alt text](/Class%20Architecture.jpg "Diagrama de classes arquitetura")
+
 
 
