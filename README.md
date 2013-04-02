@@ -49,8 +49,9 @@ Nesse projeto foi utilizado os segunintes parões:
   usar em um determinado momento do código.
 </p>
 
-Exemplo da comunicação:
-![Alt text](/blob/master/Calcular%20Salarios.jpg "Optional title")
+##Exemplo da comunicação:
+<br>
+![Alt text](/Calcular%20Salarios.jpg "Diagrama de sequencia")
 
 
 
