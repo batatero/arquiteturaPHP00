@@ -13,6 +13,13 @@ abstract class GenericDAO {
 		$this->getCI()->doctrine->em->flush();
 	}
 	
+	public function findAll(){
+		$listUsuarios = $this->getCI()->doctrine->em->getRepository($this->reflection)->findAll();
+		$this->getCI()->doctrine->em->flush();
+		
+		return $listUsuarios;
+	}
+	
 	public function findById( $id ) {
 		$obj = $this->getCI()->doctrine->em->find('usuario',$id);
 
