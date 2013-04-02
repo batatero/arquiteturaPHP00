@@ -50,7 +50,7 @@ Nesse projeto foi utilizado os segunintes parões:
 </p>
 
 Exemplo da comunicação:
-
+![Alt text](/blob/master/Calcular%20Salarios.jpg "Optional title")
 
 
 
