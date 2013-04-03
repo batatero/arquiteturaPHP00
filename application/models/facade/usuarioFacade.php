@@ -1,4 +1,9 @@
 <?php
+/**
+ * 
+ * @author Alessandro de souza taborda ribas
+ *
+ */
 class UsuarioFacade {
 	
 	public function getUsuario( $id ) {
@@ -7,12 +12,12 @@ class UsuarioFacade {
 	
 	public function persistirUsuario( Usuario $usuario ) {
 		$usuarioBusiness = FactoryBusiness::getInstance('usuarioBusiness');
-		$usuarioBusiness->persistirUsuario( $usuario );
+		return $usuarioBusiness->persistirUsuario( $usuario );
 	}
 	
 	public function somaSalarioFuncionarios( ) {
 		$usuarioBusiness = FactoryBusiness::getInstance('usuarioBusiness');
-		$usuarioBusiness->somaSalarioFuncionarios( );
+		return $usuarioBusiness->somaSalarioFuncionarios( );
 	}
 	
 }

@@ -35,5 +35,12 @@ class Usuario
      */
     private $usSalario;
 
-
+    //method magico para  acessar as variaveis
+    public function __set( $var, $val ) {
+    	$this->$var = $val;
+    }
+    
+    public function __get( $var ) {
+    	return $this->$var;
+    }
 }

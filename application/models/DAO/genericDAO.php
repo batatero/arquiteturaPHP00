@@ -1,4 +1,9 @@
 <?php
+/**
+ *
+ * @author Alessandro de souza taborda ribas
+ *
+ */
 abstract class GenericDAO {
 	//variavel que será usada para fazer o reflection da classe que está sendo trabalhada
 	protected $reflection;
@@ -11,6 +16,8 @@ abstract class GenericDAO {
 		
 		$this->getCI()->doctrine->em->persist( $obj );
 		$this->getCI()->doctrine->em->flush();
+		
+		return true;
 	}
 	
 	public function findAll(){
@@ -22,7 +29,6 @@ abstract class GenericDAO {
 	
 	public function findById( $id ) {
 		$obj = $this->getCI()->doctrine->em->find('usuario',$id);
-
 		$this->getCI()->doctrine->em->flush();
 		return $obj;
 	}
@@ -30,6 +36,7 @@ abstract class GenericDAO {
 	public function remove( $obj ){
 		$obj = $this->getCI()->doctrine->em->remove( $obj );
 		$this->getCI()->doctrine->em->flush(); // Executes all deletions.
+		return $obj;
 	}
 	
 	//instancia da model e do core do code CI

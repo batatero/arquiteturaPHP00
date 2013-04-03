@@ -52,7 +52,7 @@ $autoload['packages'] = array(APPPATH.'third_party/DoctrineORM-2.3.2');
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'Doctrine');
+$autoload['libraries'] = array('database', 'Doctrine','session','form_validation');
 
 /*
 | -------------------------------------------------------------------

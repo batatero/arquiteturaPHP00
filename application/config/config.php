@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/genericDao/';
+$config['base_url']	= 'http://localhost/arquiteturaPHP00/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -223,7 +223,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'sophia';
+$config['encryption_key'] = 'minhaChave';
 
 /*
 |--------------------------------------------------------------------------
