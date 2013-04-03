@@ -2,6 +2,7 @@
 
 
 
+use Doctrine\Mapping as ORM;
 
 /**
  * Usuario
@@ -28,18 +29,11 @@ class Usuario
     private $usNome;
 
     /**
-     * @var string
+     * @var float
      *
-     * @Column(name="us_cod", type="string", length=45, nullable=false)
+     * @Column(name="us_salario", type="decimal", nullable=false)
      */
-    private $usCod;
+    private $usSalario;
 
-    //method magico para  acessar as variaveis
-    public function __set( $var, $val ) {
-    	$this->$var = $val;
-    }
-    
-    public function __get( $var ) {
-    	return $this->$var;
-    }
+
 }
