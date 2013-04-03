@@ -119,7 +119,7 @@ abstract class GenericDAO {
 	}
 }
 ```
-No lugar de <T> como é no java usamos $this->reflection que irá ter um resultado semelhante ao do java.
+No lugar de "<T>" como é no java usamos $this->reflection que irá ter um resultado semelhante ao do java.
 
 na classe que estendemos a generic DAO apenas damos um set no atributo reflection com o nome da Entidade, o objeto que está na pasta Entities que queremos persistir no banco e fazer outras operações de banco.
 
