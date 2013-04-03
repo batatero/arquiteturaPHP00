@@ -1,4 +1,4 @@
-Arquitetura PHP 00
+##Arquitetura PHP 00
 ================
 Arquitetura em PHP, baseada na padrão Data Access Layer Architecture e no framework Spring do Java.
 
@@ -142,6 +142,6 @@ class UsuarioDAO extends GenericDAO
 Caso a genericDAO não supra a nossa necessidade podemos reinscrever os methods ou criar methods novos.
 
 ===============================================================================================================
-## No git hub teremos um explo que caucula o saladiro de todos os funcionarios:
-## a base de dados está na raiz.
+*No git hub teremos um explo que caucula o saladiro de todos os funcionarios:
+*a base de dados está na raiz.
 ===============================================================================================================
