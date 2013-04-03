@@ -57,5 +57,91 @@ Nesse projeto foi utilizado os segunintes parões:
 <br>
 ![Alt text](/Class%20Architecture.jpg "Diagrama de classes arquitetura")
 
+##Funcionamento Das DAO
 
+A  genericDAO foi desenvolvida se baseando no generics do Java onde passamos o tipo do objeto que queremos trabalhar dentro da classes.
+Nesse caso ao invés de passar do lado da classe como é no Java:
+
+```bash
+public class ObjGen<T> {
+ 
+    private T t; // T é o tipo do objeto
+    
+    public void add(T t){
+        this.t = t;
+    }
+    public T get(){
+        return this.t;
+    }
+ }
+```
+damos um set um no atributo que será usado dentro da classe que extendemos:
+
+```bash
+<?php
+abstract class GenericDAO {
+  //variavel que será usada para fazer o reflection da classe que está sendo trabalhada
+	protected $reflection;
+
+	public function __construct(){
+		$this->getCI()->load->model('Entities/'.$this->reflection, $this->reflection );
+	}
+
+	public function persist( $obj ) {
+
+		$this->getCI()->doctrine->em->persist( $obj );
+		$this->getCI()->doctrine->em->flush();
+	}
+
+	public function findAll(){
+		$listUsuarios = $this->getCI()->doctrine->em->getRepository($this->reflection)->findAll();
+		$this->getCI()->doctrine->em->flush();
+
+		return $listUsuarios;
+	}
+
+	public function findById( $id ) {
+		$obj = $this->getCI()->doctrine->em->find('usuario',$id);
+
+		$this->getCI()->doctrine->em->flush();
+		return $obj;
+	}
+
+	public function remove( $obj ){
+		$obj = $this->getCI()->doctrine->em->remove( $obj );
+		$this->getCI()->doctrine->em->flush(); // Executes all deletions.
+	}
+
+	//instancia da model e do core do code CI
+	protected function getCI () {
+		$CI = &get_instance();
+		return $CI;
+	}
+}
+```
+No lugar de <T> como é no java usamos $this->reflection que irá ter um resultado semelhante ao do java.
+
+na classe que estendemos a generic DAO apenas damos um set no atributo reflection com o nome da Entidade, o objeto que está na pasta Entities que queremos persistir no banco e fazer outras operações de banco.
+
+```bash
+<?php
+/**
+ * 
+ * @author Alessandro de souza taborda ribas
+ *
+ */
+class UsuarioDAO extends GenericDAO
+{
+  public function __construct(){
+		$this->reflection = 'usuario';
+		parent::__construct();
+
+	}	
+}
+```
+Caso a genericDAO não supra a nossa necessidade podemos reinscrever os methods ou criar methods novos.
+
+===============================================================================================================
+no git hub teremos um explo que caucula o saladiro de todos os funcionarios:
+a base de dados está na raiz.
 
