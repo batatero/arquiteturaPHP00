@@ -16,7 +16,7 @@ Para fazer a integração do codeginiter com o Doctrine foi utilizado o tutorial
 <br>
 <a href="http://imasters.com.br/artigo/25199/codeigniter/como-realizar-a-integracao-do-codeigniter-com-doctrine-2/" target="_black">Doctrine 2 e codeigniter</a>
 
-<h3>Padrões de Projetos Utilizados (design patterns)</h3>
+##Padrões de Projetos Utilizados (design patterns)
 
 Nesse projeto foi utilizado os segunintes parões:
 <ul>
@@ -27,7 +27,7 @@ Nesse projeto foi utilizado os segunintes parões:
   <li>Factory : http://www.oodesign.com/factory-pattern.html</li>
 </ul>
 
-<h3>Como funciona a arquitetura:</h3>
+##Como funciona a arquitetura:
 <p>
   Nessa arquitetura iniciaremos com uma injeção de dependência onde cada camada o irá fazer apenas o que foi feita pra 
   fazer e assim garantindo uma alta coesão:
@@ -119,9 +119,9 @@ abstract class GenericDAO {
 	}
 }
 ```
-No lugar de "<T>" como é no java usamos $this->reflection que irá ter um resultado semelhante ao do java.
+No lugar de ```bash <T> ``` como é no java usamos $this->reflection que irá ter um resultado semelhante ao do java.
 
-na classe que estendemos a generic DAO apenas damos um set no atributo reflection com o nome da Entidade, o objeto que está na pasta Entities que queremos persistir no banco e fazer outras operações de banco.
+Na classe que estendemos a generic DAO apenas damos um set no atributo reflection com o nome da Entidade, o objeto que está na pasta Entities que queremos persistir no banco e fazer outras operações de banco.
 
 ```bash
 <?php
@@ -142,6 +142,6 @@ class UsuarioDAO extends GenericDAO
 Caso a genericDAO não supra a nossa necessidade podemos reinscrever os methods ou criar methods novos.
 
 ===============================================================================================================
-no git hub teremos um explo que caucula o saladiro de todos os funcionarios:
-a base de dados está na raiz.
-
+## No git hub teremos um explo que caucula o saladiro de todos os funcionarios:
+## a base de dados está na raiz.
+===============================================================================================================
