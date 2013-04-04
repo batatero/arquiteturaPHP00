@@ -57,6 +57,50 @@ Nesse projeto foi utilizado os segunintes parões:
 <br>
 ![Alt text](/Class%20Architecture.jpg "Diagrama de classes arquitetura")
 
+##Usando As Factorys
+
+Para usar as factorys de uma forma mais fácil foi adicionado no arquivo autoload.php o load automático da factoryBusiness e factoryDao que está dentro da pasta application/config/
+
+```bash
+/*
+| -------------------------------------------------------------------
+|  Auto-load Models
+| -------------------------------------------------------------------
+| Prototype:
+|
+|	$autoload['model'] = array('model1', 'model2');
+|
+*/
+
+$autoload['model'] = array('DAO/factoryDAO','business/factoryBusiness');
+```
+
+A forma que chamamos as factorys para retorna a instância de um objeto é:
+<br />
+Chamada feita na Business para factoryDAO
+
+```bash		
+$usuarioDAO = FactoryDAO::getInstance('usuarioDAO');
+$listUsuarios = $usuarioDAO->findAll();
+
+ou		
+
+$listUsuarios = FactoryDAO::getInstance('usuarioDAO')->findAll();
+```
+
+Chamada feita da façada para factoryBusiness
+<br />
+
+```bash
+$usuarioBusiness = FactoryBusiness::getInstance('usuarioBusiness');
+$usuarioBusiness->somaSalarioFuncionarios();
+
+ou
+
+FactoryBusiness::getInstance('usuarioBusiness')->somaSalarioFuncionarios();
+```
+
+
 ##Funcionamento Das DAO
 
 A  genericDAO foi desenvolvida se baseando no generics do Java onde passamos o tipo do objeto que queremos trabalhar dentro da classes.
