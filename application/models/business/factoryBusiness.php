@@ -1,11 +1,17 @@
 <?php
 class FactoryBusiness {
 	private static $instance = null;
+	private static $CI = null;
 	
 	public static function getInstance( $objName ) {
 		
+		//recebe a instacia do CI
+		if ( self::$CI == null ) {
+			self::$CI = self::getCI();
+		}
+		
 		//carrega o  objeto que vai ser instanciado
-		self::getCI()->load->model('business/'.$objName);
+		self::$CI->load->model('business/'.$objName);
 		
 		//verifica se ja existe uma stancia de um DAO
 		if ( (self::$instance == null) OR !($objName instanceof $objName) ) { 
@@ -16,7 +22,7 @@ class FactoryBusiness {
 	}
 	
 	//instancia da model e do core do code CI
-	protected static function getCI () {
+	private static function getCI () {
 		$CI = &get_instance();
 		return $CI;
 	}
