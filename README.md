@@ -59,7 +59,7 @@ Nesse projeto foi utilizado os segunintes parões:
 
 ##Usando As Factorys
 
-Para usar as factorys de uma forma mais fácil foi adicionado no arquivo autoload.php o load automático da factoryBusiness e factoryDao que está dentro da pasta application/config/
+Para usar as factorys de uma forma mais fácil foi adicionado no arquivo autoload.php a factoryBusiness e factoryDao que está dentro da pasta application/config/
 
 ```bash
 /*
@@ -74,7 +74,7 @@ Para usar as factorys de uma forma mais fácil foi adicionado no arquivo autoloa
 
 $autoload['model'] = array('DAO/factoryDAO','business/factoryBusiness');
 ```
-
+Todas as 
 A forma que chamamos as factorys para retorna a instância de um objeto é:
 <br />
 Chamada feita na Business para factoryDAO
@@ -101,7 +101,7 @@ FactoryBusiness::getInstance('usuarioBusiness')->somaSalarioFuncionarios();
 ```
 
 
-##Funcionamento Das DAO
+##Funcionamento Da DAO
 
 A  genericDAO foi desenvolvida se baseando no generics do Java onde passamos o tipo do objeto que queremos trabalhar dentro da classes.
 Nesse caso ao invés de passar do lado da classe como é no Java:
