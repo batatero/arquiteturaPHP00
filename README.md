@@ -1,6 +1,6 @@
 ##Arquitetura PHP 00
 ================
-Arquitetura em PHP, baseada na padrão Data Access Layer Architecture e no framework Spring do Java.
+Arquitetura em PHP, baseada no padrão Data Access Layer Architecture e no framework Spring do Java.
 
 A arquitetura foi desenvolvida para atingir um baixo acoplameto e alta coessão com PHP.
 
@@ -18,7 +18,7 @@ Para fazer a integração do codeginiter com o Doctrine foi utilizado o tutorial
 
 ##Padrões de Projetos Utilizados (design patterns)
 
-Nesse projeto foi utilizado os segunintes parões:
+Nesse projeto foram utilizado os seguintes padrões:
 <ul>
   <li>Singleton : http://www.oodesign.com/singleton-pattern.html</li>
   <li>Façade : http://www.tutorialspoint.com/design_pattern/facade_pattern.htm</li>
@@ -29,7 +29,7 @@ Nesse projeto foi utilizado os segunintes parões:
 
 ##Como funciona a arquitetura:
 <p>
-  Nessa arquitetura iniciaremos com uma injeção de dependência onde cada camada o irá fazer apenas o que foi feita pra 
+  Nessa arquitetura iniciaremos com uma injeção de dependência onde cada camada irá fazer apenas o que foi feita pra
   fazer e assim garantindo uma alta coesão:
 </p>
 
@@ -42,7 +42,7 @@ Nesse projeto foi utilizado os segunintes parões:
   <li> DAO : Objeto responsável pela persistência do objeto;</li>
 </ul>
 
-</p>  
+</p>
 
 <p>
   Para facilitar as comunicações entre camadas usamos uma Factory que ira retornar a instancia do objeto que eu vou precisar
@@ -57,7 +57,7 @@ Nesse projeto foi utilizado os segunintes parões:
 <br>
 ![Alt text](/Class%20Architecture.jpg "Diagrama de classes arquitetura")
 
-##Usando As Factorys
+##Usando Factorys
 
 Para usar as factorys de uma forma mais fácil foi adicionado no arquivo autoload.php a factoryBusiness e factoryDao que está dentro da pasta application/config/
 
@@ -66,7 +66,7 @@ Para usar as factorys de uma forma mais fácil foi adicionado no arquivo autoloa
 | -------------------------------------------------------------------
 |  Auto-load Models
 | -------------------------------------------------------------------
-| Prototype:
+|  Prototype:
 |
 |	$autoload['model'] = array('model1', 'model2');
 |
@@ -78,11 +78,11 @@ A forma que chamamos as factorys para retorna a instância de um objeto é:
 <br />
 Chamada feita na Business para factoryDAO
 
-```bash		
+```bash
 $usuarioDAO = FactoryDAO::getInstance('usuarioDAO');
 $listUsuarios = $usuarioDAO->findAll();
 
-ou		
+// ou
 
 $listUsuarios = FactoryDAO::getInstance('usuarioDAO')->findAll();
 ```
@@ -94,7 +94,7 @@ Chamada feita da façada para factoryBusiness
 $usuarioBusiness = FactoryBusiness::getInstance('usuarioBusiness');
 $usuarioBusiness->somaSalarioFuncionarios();
 
-ou
+// ou
 
 FactoryBusiness::getInstance('usuarioBusiness')->somaSalarioFuncionarios();
 ```
@@ -107,9 +107,9 @@ Nesse caso ao invés de passar do lado da classe como é no Java:
 
 ```bash
 public class ObjGen<T> {
- 
+
     private T t; // T é o tipo do objeto
-    
+
     public void add(T t){
         this.t = t;
     }
@@ -169,7 +169,7 @@ Na classe que estendemos a generic DAO apenas damos um set no atributo reflectio
 ```bash
 <?php
 /**
- * 
+ *
  * @author Alessandro de souza taborda ribas
  *
  */
@@ -179,12 +179,12 @@ class UsuarioDAO extends GenericDAO
 		$this->reflection = 'usuario';
 		parent::__construct();
 
-	}	
+	}
 }
 ```
-Caso a genericDAO não supra a nossa necessidade podemos reinscrever os methods ou criar methods novos.
+Caso a genericDAO não supra a nossa necessidade podemos reescrever os metodos ou criar metodos novos.
 
 //===============================================================================================================//
-No git hub teremos um explo que caucula o saladiro de todos os funcionarios:
-a base de dados está na raiz.
+No git hub teremos um explo que calcula o salario de todos os funcionários.
+A base de dados está na raiz.
 
