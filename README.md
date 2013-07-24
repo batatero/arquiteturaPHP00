@@ -1,8 +1,8 @@
-##Estrutura PHP 00
+##Arquitetura PHP 00
 ================
-Estrutura em PHP, baseada no padrão Data Access Layer Architecture e no framework Spring do Java.
+Arquitetura em PHP, baseada no padrão Data Access Layer Architecture e no framework Spring do Java.
 
-A estrutura foi desenvolvida para atingir um baixo acoplameto e alta coessão com PHP.
+A arquitetura foi desenvolvida para atingir um baixo acoplameto e alta coessão com PHP.
 
 Ela foi desenvolvida com as seguintes ferramentas:
 
@@ -27,9 +27,9 @@ Nesse projeto foram utilizado os seguintes padrões:
   <li>Factory : http://www.oodesign.com/factory-pattern.html</li>
 </ul>
 
-##Como funciona a estrutura:
+##Como funciona a arquitetura:
 <p>
-  Nessa estrutura iniciaremos com uma injeção de dependência onde cada camada irá fazer apenas o que foi feita pra
+  Nessa arquitetura iniciaremos com uma injeção de dependência onde cada camada irá fazer apenas o que foi feita pra
   fazer e assim garantindo uma alta coesão:
 </p>
 
