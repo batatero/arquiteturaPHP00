@@ -29,8 +29,7 @@ Nesse projeto foram utilizado os seguintes padrões:
 
 ##Como funciona a arquitetura:
 <p>
-  Nessa arquitetura iniciaremos com uma injeção de dependência onde cada camada irá fazer apenas o que foi feita pra
-  fazer e assim garantindo uma alta coesão:
+  Nessa cada camada irá fazer apenas o que foi feita pra fazer e assim garantindo uma alta coesão:
 </p>
 
 <p>
