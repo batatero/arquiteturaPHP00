@@ -30,7 +30,7 @@ abstract class GenericDAO {
 	}
 	
 	public function findById( $id ) {
-		$obj = $this->CI->doctrine->em->find('usuario',$id);
+		$obj = $this->CI->doctrine->em->find($this->reflection,$id);
 		$this->CI->doctrine->em->flush();
 		return $obj;
 	}
